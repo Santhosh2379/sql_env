@@ -5,11 +5,11 @@ except Exception as e:
     raise ImportError("openenv is required. Install with 'uv sync'") from e
 
 try:
-    from ..models import SQLAction, SQLObservation
-    from .sql_env_environment import SQLEnvironment
-except ModuleNotFoundError:
     from models import SQLAction, SQLObservation
     from server.sql_env_environment import SQLEnvironment
+except ModuleNotFoundError:
+    from sql_env.models import SQLAction, SQLObservation
+    from sql_env.server.sql_env_environment import SQLEnvironment
 
 app = create_app(
     SQLEnvironment,
