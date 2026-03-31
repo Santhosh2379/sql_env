@@ -1,0 +1,35 @@
+name: sql_env
+version: 1.0.0
+description: >
+  A real-world OpenEnv environment where an AI agent generates SQL queries
+  from natural language questions. Tasks range from simple SELECT statements
+  to complex multi-table JOINs and subqueries, with partial reward signals.
+author: Santhosh1723
+tasks:
+  - id: easy_1
+    difficulty: easy
+    description: Find names and emails of all customers
+  - id: easy_2
+    difficulty: easy
+    description: Count total number of employees
+  - id: easy_3
+    difficulty: easy
+    description: List products with price greater than 100
+  - id: medium_1
+    difficulty: medium
+    description: Total amount spent by each customer using JOIN
+  - id: medium_2
+    difficulty: medium
+    description: Employees with salary above department average
+  - id: medium_3
+    difficulty: medium
+    description: Top 5 products by total revenue
+  - id: hard_1
+    difficulty: hard
+    description: Customers with 3+ orders and spending over $1000
+  - id: hard_2
+    difficulty: hard
+    description: Highest paid employee per department
+  - id: hard_3
+    difficulty: hard
+    description: Products that have never been ordered
