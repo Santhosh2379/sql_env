@@ -18,6 +18,15 @@ app = create_app(
     env_name="sql_env",
     max_concurrent_envs=1,
 )
+from fastapi.responses import JSONResponse
+
+@app.get("/health")
+async def health():
+    return JSONResponse({"status": "ok"})
+
+@app.get("/")
+async def root():
+    return JSONResponse({"status": "ok", "env": "sql_env"})
 
 
 def main(host: str = "0.0.0.0", port: int = 8000):
