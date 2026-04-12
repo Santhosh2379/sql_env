@@ -47,7 +47,7 @@ def parse_sql(response_text: str) -> str:
     return text
 
 
-async def run_inference(base_url: str = "http://localhost:8000", num_episodes: int = 3):
+async def run_inference(base_url: str = "https://Santhosh1723-sql-env.hf.space", num_episodes: int = 3):
     client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
 
     all_results = []
@@ -130,7 +130,7 @@ async def run_inference(base_url: str = "http://localhost:8000", num_episodes: i
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", default="http://localhost:8000")
+    parser.add_argument("--url", default="https://Santhosh1723-sql-env.hf.space")
     parser.add_argument("--episodes", type=int, default=3)
     args = parser.parse_args()
     asyncio.run(run_inference(base_url=args.url, num_episodes=args.episodes))
